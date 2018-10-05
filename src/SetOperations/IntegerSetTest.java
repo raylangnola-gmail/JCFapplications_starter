@@ -153,21 +153,6 @@ class IntegerSetTest {
         return removeDupes(Arrays.asList(vals));
     }
 
-    private List<Integer> removeDupes0(List<Integer> vals) {
-        List<Integer> unique_vals = new ArrayList<>();
-        for (int i = 0; i < vals.size(); i++) {
-            Integer val = vals.get(i);
-            boolean dupe = false;
-            for (int j = i + 1; j < vals.size(); j++) {
-                dupe = dupe || vals.get(j) == val;
-            }
-            if (!dupe) {
-                unique_vals.add(val);
-            }
-        }
-        return unique_vals;
-    }
-
     private List<Integer> removeDupes(List<Integer> vals) {
         List<Integer> unique_vals = new ArrayList<>();
 
